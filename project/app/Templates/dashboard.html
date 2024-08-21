@@ -1,0 +1,798 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static "\css\dashboard.css" %}">
+    <link rel="stylesheet" href="{% static "\Assets\css\utility.css" %}">
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-container">
+
+            <div class="dash-company-logo-box">
+                <img src="{% static "images/logo.png" %}" alt="">
+                <span><i class='bx bx-dock-left' id="dock-to-left"></i></span>
+            </div>
+
+            <div class="search-box-container">
+                <div class="searchbar-box">
+                    <span><img src="{% static "images/frame_inspect.png" %}" alt=""></span>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="profile-content-container">
+
+                <div class="notification-unread-icon">
+                    <img src="{% static "images/notifications_unread.png" %}" alt="">
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="last-login-date-box">
+                    <p>Last Login: Monday, 22nd July, 2024</p>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="profile-content">
+                    <img src="{% static "images/person_4.png" %}" alt="">
+                    <div class="admin-name">
+                        <h4>Super Admin</h4>
+                        <p>Logged In</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <article id="dash-board-body-wrap">
+        <nav id="Side-Navbar">
+            <div class="side-navbar-container">
+
+                <div class="side-nav-flex">
+                    <h1>MAIN</h1>
+                    <ul>
+                        <li> <!-- border-left -->
+                            <a href="{% url "dashboard" %}">
+                                <i class='bx bx-grid-alt'></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxs-bar-chart-alt-2'></i>
+                                <span>Analytics</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-download'></i>
+                                <span>App Download Status</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="navbar-separator"></div><!-- navbar-separator -->
+
+                <div class="Hiremi-program side-nav-flex">
+                    <h1>HIREMI'S PROGRAMS</h1>
+                    <ul>
+                        <li>
+                            <a href="{% url "mentorship" %}">
+                                <i class='bx bx-support'></i>
+                                <span>Mentorship</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="{% url "internship" %}">
+                                <i class='bx bxs-spa'></i>
+                                <span>Internship</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="{% url "fresher_Job" %}">
+                                <i class='bx bxs-briefcase-alt-2'></i>
+                                <span>Fresher Job</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxs-graduation'></i>
+                                <span>Experienced Job</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url "corporate_training" %}">
+                                <i class='bx bx-bar-chart-alt'></i>
+                                <span>Corporate Training </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-wifi'></i>
+                                <span>Training</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="navbar-separator"></div><!-- navbar-separator -->
+
+                <div class="admin-setting side-nav-flex">
+                    <h1>MORE & ADMIN SETTING</h1>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-file'></i>
+                                <span>Project Report</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-cog'></i>
+                                <span>Project Report</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <!--  DASHBOARD PAGE -->
+        <main>
+            <section id="dashboard-page" style="background-color:yellow;">
+
+                <div class="dashboard-container"><!-- scroll -->
+
+                    <div class="dashbord-content" style="display: none;"><!-- content container -->
+
+                        <div class="application-dashboard">
+                            <h1>Application Dashboard</h1>
+                            <div class="application-dashboard-box">
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <img src="{% static "/images/registration.png" %}" class="dashboard-icon-img"
+                                            alt=""><!-- icon image -->
+
+                                        <span>
+                                            <p class="green-btn">Goal Completed: 30% <img
+                                                    src="{% static "/images/arrow_warm_up.png" %}" alt=""></p>
+                                            <p class="red-btn">Goal Remaining: 70% <img
+                                                    src="{% static "/images/crisis_alert.png" %}" alt=""></p>
+                                        </span>
+
+                                    </div>
+
+                                    <p id="content-text" style="color:#0870FF;">Total Registration</p>
+                                    <p id="content-amount">30000<span>/100000</span></p>
+                                    <span id="new-register-txt">
+                                        <p>This Month: </p>
+                                        <p>+3000</p>
+                                        <p>New Registration</p>
+                                    </span>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <img src="{% static "/images/verified.png" %}" class="dashboard-icon-img"
+                                            alt=""><!-- icon image -->
+
+                                        <span>
+                                            <p class="green-btn">Goal Completed: 30% <img
+                                                    src="{% static "/images/arrow_warm_up.png" %}" alt=""></p>
+                                            <p class="red-btn">Goal Remaining: 70% <img
+                                                    src="{% static "/images/crisis_alert.png" %}" alt=""></p>
+                                        </span>
+
+                                    </div>
+
+                                    <p id="content-text" style="color: #34AD78;">Verified Users</p>
+                                    <p id="content-amount">10000<span>/100000</span></p>
+                                    <span id="new-register-txt">
+                                        <p>This Month: </p>
+                                        <p>+750</p>
+                                        <p>verified User</p>
+                                    </span>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <img src="{% static "/images/error.png" %}" class="dashboard-icon-img"
+                                            alt=""><!-- icon image -->
+
+                                        <span>
+                                            <p class="green-btn">Goal Completed: 30% <img
+                                                    src="{% static "/images/arrow_warm_up.png" %}" alt=""></p>
+                                            <p class="red-btn">Goal Remaining: 70% <img
+                                                    src="{% static "/images/crisis_alert.png" %}" alt=""></p>
+                                        </span>
+
+                                    </div>
+
+                                    <p id="content-text" style="color: #DC143C;">Not Verified Users</p>
+                                    <p id="content-amount">20000<span>/100000</span></p>
+                                    <span id="new-register-txt">
+                                        <p>This Month: </p>
+                                        <p>+2250</p>
+                                        <p>Not Verified User</p>
+                                    </span>
+                                </div>
+
+                                <!-- add content box -->
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="business-dashboard">
+                            <h1>Business Dashboard</h1>
+                            <div class="application-dashboard-box">
+
+                                <div class="box">
+
+                                    <div class="business-dashboard-img-container">
+                                        <img src="{% static "/images/tie-up.png" %}" class="dashboard-icon-img" alt="">
+                                        <p style="color: #0870FF;">Total Tie Up(s)</p>
+                                    </div>
+
+                                    <p id="content-amount">012</p>
+
+                                </div>
+
+                                <div class="box">
+
+                                    <div class="business-dashboard-img-container">
+                                        <img src="{% static "/images/staff.png" %}" class="dashboard-icon-img" alt="">
+                                        <p style="color: #34AD78;">Total Staff</p>
+                                    </div>
+
+                                    <p id="content-amount">032</p>
+
+                                </div>
+
+                                <div class="box">
+
+                                    <div class="business-dashboard-img-container">
+                                        <img src="{% static "/images/total-hr.png" %}" class="dashboard-icon-img" alt="">
+                                        <p style="color: #DC143C;">Total HR(s)</p>
+                                    </div>
+
+                                    <p id="content-amount">021</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="hiremi-Ongoing-dashboard">
+                            <h1>Hiremi’s Ongoing Programs Summary</h1>
+                            <div class="hiremi-dashboard-box">
+
+                                <div class="box">
+                                    <img src="{% static "/images/01_Internship Active Users.png" %}" alt=""
+                                        class="dashboard-icon-img">
+                                    <p style="color: #FF7402;">Internship: Active Users</p>
+                                    <span id="content-amount">012 <p class="green-btn">+2.02% ▴</p></span>
+                                    <p>This Month: +10 Active Users</p>
+                                </div>
+
+                                <div class="box">
+                                    <img src="{% static "/images/02_Mentorship Active Users.png" %}" alt=""
+                                        class="dashboard-icon-img">
+                                    <p style="color: #2E3DEB;">Mentorship: Active Users</p>
+                                    <span id="content-amount">012</span>
+                                    <p>This Month: +02 Active Users</p>
+                                </div>
+
+                                <div class="box">
+                                    <img src="{% static "/images/03_Experienced Job Active Users.png" %}" alt=""
+                                        class="dashboard-icon-img">
+                                    <p style="color: #CB46BC;">Experienced Job: Active Users</p>
+                                    <span id="content-amount">012</span>
+                                    <p>This Month: +02 Active Users</p>
+                                </div>
+
+
+
+                                <div class="box">
+                                    <img src="{% static "/images/06_Training Active Users.png" %}" alt=""
+                                        class="dashboard-icon-img">
+                                    <p style="color: #0870FF;">Training: Active Users</p>
+                                    <span id="content-amount">012</span>
+                                    <p>This Month: +07 Active Users</p>
+                                </div>
+
+                                <div class="box">
+                                    <img src="{% static "/images/04_Corporate Training Active Users.png" %}" alt=""
+                                        class="dashboard-icon-img">
+                                    <p style="color: #09C0B5;">Corporate Training: Active Users</p>
+                                    <span id="content-amount">07</span>
+                                    <p>This Month: +03 Active Users</p>
+                                </div>
+
+                                <div class="box">
+                                    <img src="{% static "/images/05_Fresher Job Active Users.png" %}" alt=""
+                                        class="dashboard-icon-img">
+                                    <p style="color: #FC423B;">Fresher Job: Active Users</p>
+                                    <span id="content-amount">012 <p class="red-btn">-1.02% ▾</p></span>
+                                    <p>This Month: +05 Active Users</p>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="query-summary-dashboard">
+
+                            <div class="query-summary">
+                                <h1>Queries Summary</h1>
+                                <div class="query-summary-dashboard-box">
+
+                                    <div class="box">
+                                        <div class="query-summary-img-container">
+                                            <img src="{% static "/images/01_query.png" %}" alt="" class="dashboard-icon-img">
+                                            <p>Pending Queries</p>
+                                        </div>
+                                        <p id="content-amount">05</p>
+                                    </div>
+
+                                    <div class="box">
+                                        <div class="query-summary-img-container">
+                                            <img src="{% static "/images/02_query.png" %}" alt="" class="dashboard-icon-img">
+                                            <p style="color: #34AD78;">Resolved Queries</p>
+                                        </div>
+                                        <p id="content-amount">052</p>
+                                    </div>
+
+                                    <!-- add box -->
+                                </div>
+                            </div>
+
+
+                            <div class="last-query-summary">
+                                <h1>Last three Queries Summary</h1>
+                                <div class="last-query-summary-dashboard">
+
+                                    <div class="query-box">
+                                        <div class="query-profile">
+                                            <img src="{% static "/images/last-client-query.png" %}" alt="">
+                                            <span>
+                                                <h3>john Smith</h3>
+                                                <p>johnsmith@gmail.com</p>
+                                            </span>
+                                        </div>
+                                        <div class="query-btns">
+                                            <button id="query-btn">View Query</button>
+                                            <button id="resolve-btn">Resolve Now</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="query-box">
+                                        <div class="query-profile">
+                                            <img src="{% static "/images/last-client-query.png" %}" alt="">
+                                            <span>
+                                                <h3>john Smith</h3>
+                                                <p>johnsmith@gmail.com</p>
+                                            </span>
+                                        </div>
+                                        <div class="query-btns">
+                                            <button id="query-btn">View Query</button>
+                                            <button id="resolve-btn">Resolve Now</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="query-box">
+                                        <div class="query-profile">
+                                            <img src="{% static "/images/last-client-query.png" %}" alt="">
+                                            <span>
+                                                <h3>john Smith</h3>
+                                                <p>johnsmith@gmail.com</p>
+                                            </span>
+                                        </div>
+                                        <div class="query-btns">
+                                            <button id="query-btn">View Query</button>
+                                            <button id="resolve-btn">Resolve Now</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- add query box -->
+                                </div>
+
+                                <div id="query-view-all-btn">
+                                    <button>View All ></button>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="active-user-dashboard">
+                            <h1>Active Users (Ongoing Programs)</h1>
+                            <p>Visual Graph Representation</p>
+                            <div class="active-user-graph-img">
+                                <img src="{% static "/Assets/images/acitve-user-graph.png" %}" alt="graph">
+                            </div>
+                        </div>
+
+                        <!-- add dashboard container -->
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="{% static "/Assets/images/goto-top-btn.png" %}" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="app-download-status-content">
+
+                        <div class="download-status-container">
+                            <div class="download-status-heading">
+                                <h1>State Rankings: Downloads, Verified and Not Verified Users</h1>
+                                <button id="download-app-btn">
+                                    <img src="{% static "/images/download-app-btn.png" %}" alt="">
+                                    <p>Download App</p>
+                                </button>
+                            </div>
+
+                            <span>
+                                <p>Table Representation</p>
+                            </span>
+
+                            <div class="download-status-buttons">
+
+                                <button id="verified-user-btn">
+                                    <img src="{% static "/images/verified.png" %}" alt="verified-img">
+                                    <p>Verified Users</p>
+                                </button>
+
+                                <button id="non-verified-user-btn">
+                                    <img src="{% static "/images/error.png" %}" alt="non-verified-img">
+                                    <p>Not Verified Users</p>
+                                </button>
+
+                                <button id="app-download-status-btn">
+                                    <img src="{% static "/images/app-download-moble-img.png" %}" alt="">
+                                    <p>App Downloads</p>
+                                </button>
+
+                                <button id="sort-btn">
+                                    <img src="{% static "/images/swap_vert.png" %}" alt="">
+                                    <p>Sort</p>
+                                </button>
+
+                            </div>
+
+                            <div class="download-status-list-container">
+                                <div class="download-status-list-heading">
+                                    <p>S.No</p>
+                                    <p>States Names</p>
+                                    <p>App downloads</p>
+                                    <p style="color: #34AD78;">Verified Users</p>
+                                    <p style="color: #C1272D;">Not Verified Users</p>
+                                </div>
+                                <div class="download-status-list">
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">2</li>
+                                            <li id="states-name">Arunachal Pradesh</li>
+                                            <li id="app-download">523</li>
+                                            <li id="verified-user">107</li>
+                                            <li id="not-verified-user">590</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">3</li>
+                                            <li id="states-name">Assam</li>
+                                            <li id="app-download">125</li>
+                                            <li id="verified-user">425</li>
+                                            <li id="not-verified-user">55</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">4</li>
+                                            <li id="states-name">Bihar</li>
+                                            <li id="app-download">394</li>
+                                            <li id="verified-user">36</li>
+                                            <li id="not-verified-user">707</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+                                    <div class="states-list-item">
+                                        <ul>
+                                            <li id="s.no">1</li>
+                                            <li id="states-name">Andhra Pradesh</li>
+                                            <li id="app-download">409</li>
+                                            <li id="verified-user">133</li>
+                                            <li id="not-verified-user">396</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- add more states data -->
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="{% static "/images/goto-top-btn.png" %}" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- add other section -->
+
+                </div>
+                </div>
+
+
+
+            </section>
+
+            <!-- other section are added here -->
+
+        </main>
+
+    </article>
+
+    <script src="{% static "\js\dashboard.js" %}"></script>
+</body>
+
+</html>

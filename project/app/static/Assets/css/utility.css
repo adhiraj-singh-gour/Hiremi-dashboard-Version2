@@ -1,0 +1,188 @@
+/* services box css */
+.dashboard-icon-img {
+    width: 20%;
+}
+
+.green-btn {
+    color: rgb(0, 211, 0);
+    font-size: 0.53rem;
+    border: 1px solid #34AD78;
+    border-radius: 20px;
+    background-color: #34ad7910;
+    padding: 2.3px 5px;
+    margin-bottom: 4px;
+}
+
+.green-btn img {
+    width: 7.2px;
+}
+
+.red-btn {
+    color: red;
+    font-size: 0.53rem;
+    border: 1px solid #C1272D;
+    border-radius: 20px;
+    background-color: #c1272c1a;
+    padding: 2px 5px;
+}
+
+.red-btn img {
+    width: 10.42px;
+}
+
+
+#content-text {
+    color: #0870FF;
+    font-size: 0.8rem;
+    margin: 10px 0px;
+}
+
+
+#content-amount {
+    font-size: 2.5rem;
+}
+
+#content-amount span {
+    font-size: 1rem;
+    color: #B0BBC6;
+}
+
+#new-register-txt {
+    display: flex;
+    align-items: flex-end;
+}
+
+#new-register-txt p:nth-child(1) {
+    font-size: 1rem;
+    color: #B0BBC6;
+}
+
+#new-register-txt p:nth-child(2) {
+    font-size: 1rem;
+    color: #34AD78;
+}
+
+#new-register-txt p:nth-child(3) {
+    font-size: 0.7rem;
+    color: #34AD78;
+
+}
+
+
+/* dashboard -> hiremi ongoing dashbord css */
+.hiremi-dashboard-box .box:nth-child(1):hover {
+    outline: 1px solid #FF7402;
+}
+
+.hiremi-dashboard-box .box:nth-child(2):hover {
+    outline: 1px solid #2E3DEB;
+}
+
+.hiremi-dashboard-box .box:nth-child(3):hover {
+    outline: 1px solid #CB46BC;
+}
+
+.hiremi-dashboard-box .box:nth-child(4):hover {
+    outline: 1px solid #0870FF;
+}
+
+.hiremi-dashboard-box .box:nth-child(5):hover {
+    outline: 1px solid #09C0B5;
+}
+
+.hiremi-dashboard-box .box:nth-child(6):hover {
+    outline: 1px solid #FC423B;
+}
+
+/* ====== */
+.hiremi-dashboard-box .box:nth-child(1) {
+    background-color: #ff740212;
+}
+
+.hiremi-dashboard-box .box:nth-child(2) {
+    background-color: #2e3eeb11;
+}
+
+.hiremi-dashboard-box .box:nth-child(3) {
+    background-color: #cb46bb09;
+}
+
+.hiremi-dashboard-box .box:nth-child(4) {
+    background-color: #086fff10;
+}
+
+.hiremi-dashboard-box .box:nth-child(5) {
+    background-color: #09c0b410;
+}
+
+.hiremi-dashboard-box .box:nth-child(6) {
+    background-color: #fc413b13;
+}
+
+
+/* dashboard -> query-summary section */
+
+.query-summary .box:nth-child(1) {
+    background-color: #EB8D2E;
+    color: white;
+}
+
+.query-summary .box:nth-child(2) {
+    background-color: white;
+    border: 1px solid #34AD78;
+}
+
+
+/* app download status section section */
+#verified-user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #34AD78;
+    color: white;
+
+}
+
+#verified-user-btn img {
+    width: 30px;
+}
+
+#non-verified-user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    background-color: #d52e34;
+    color: white;
+}
+
+#non-verified-user-btn img {
+    width: 30px;
+}
+
+#app-download-status-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid black;
+    padding: 5px 25px;
+}
+
+#app-download-status-btn img {
+    width: 16px;
+}
+
+#sort-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid black;
+    padding: 5px 25px;
+}
+
+#sort-btn img {
+    width: 18px;
+}

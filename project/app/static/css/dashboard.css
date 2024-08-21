@@ -1,0 +1,847 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* header css */
+.header-container {
+    width: 100vw;
+    height: 12vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* to give the gap betweeen all header div*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: 1px solid #b8b8b8;
+}
+
+.dash-company-logo-box {
+    width: 19%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.dash-company-logo-box img {
+    width: 107px;
+    border: 1px solid #80808035;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.dash-company-logo-box span i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #A5A5A5;
+}
+
+.search-box-container {
+    width: 45%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+
+.searchbar-box {
+    width: 50%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F6F9;
+    border-radius: 7px;
+    padding: 0px 15px;
+
+}
+
+.searchbar-box img {
+    width: 20px;
+    margin: 0px 3px;
+    cursor: pointer;
+}
+
+.searchbar-box input {
+    width: 90%;
+    height: 55%;
+    padding: 0px 5px 2px 5px;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #9b9b9b;
+}
+
+.searchbar-box input::placeholder {
+    color: #9b9b9b;
+}
+
+
+.profile-content-container {
+    width: 30%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.separator {
+    width: 1.5px;
+    height: 80%;
+    background-color: #F4F6F9;
+}
+
+
+.notification-unread-icon img {
+    padding-top: 7px;
+    width: 17px;
+    cursor: pointer;
+}
+
+
+.last-login-date-box p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #575E6A;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.profile-content img {
+    width: 19px;
+    background-color: #F4F6F9;
+    padding: 10px 10px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.admin-name {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.admin-name h4 {
+    font-size: 1rem;
+    color: rgb(81, 81, 81);
+}
+
+.admin-name p {
+    font-size: 0.75rem;
+    color: #A5A5A5;
+}
+
+/* ===========side navbar css============ */
+
+.side-navbar-container li {
+    list-style: none;
+}
+
+#Side-Navbar {
+    width: 20%;
+    /* to fixed the position of navbar */
+    position: fixed;
+    top: 12vh;
+    left: 0;
+    /* above is complementry */
+}
+
+.side-navbar-container {
+    width: 100%;
+    height: 88vh;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* border-right: 1px solid #F4F6F9; */
+    border-right: 1px solid #b8b8b8;
+    transition: width .3s ease-in-out;
+    padding-top: 20px;
+}
+
+/* .main {
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.side-navbar-container .side-nav-flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: gray; */
+
+}
+
+/* .main h1 {
+    width: 90%;
+    font-size: 1rem;
+    color: #A5A5A5;
+    background-color: yellow;
+} */
+
+.side-navbar-container h1 {
+    width: 90%;
+    font-size: 0.8rem;
+    color: #A5A5A5;
+    font-weight: 500;
+}
+
+/* .main ul {
+    width: 90%;
+    background-color: green;
+} */
+
+.side-navbar-container ul {
+    width: 90%;
+}
+
+/* .main ul li {
+    margin-top: 10px;
+    list-style: none;
+    background-color: white;
+    font-size: 1.2rem;
+} */
+
+.side-navbar-container ul li {
+    margin-top: 13px;
+    list-style: none;
+    background-color: white;
+    font-size: 1rem;
+    /* border-left: 4px solid red; */
+    padding: 1px 0px;
+}
+
+/* .main ul li a {
+    color: #575E6A;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+} */
+
+.side-navbar-container ul li a {
+    color: #575E6A;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* .main ul li a i {
+    font-size: 1.5rem;
+} */
+
+.side-navbar-container ul li a i {
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in;
+}
+
+.side-navbar-container ul li a span {
+    margin-left: 15px;
+}
+
+.navbar-separator {
+    width: 100%;
+    height: 0.8px;
+    background-color: #767676;
+    margin: 10px 0px;
+}
+
+.side-navbar-container ul li a i.active {
+    font-size: 2rem;
+}
+
+
+/* dashboard page section */
+
+#dash-board-body-wrap {
+    width: 100vw;
+    display: flex;
+    position: relative;
+    top: 12vh;
+}
+
+main {
+    /* this will always be exits */
+    width: 80%;
+    background-color: red;
+    /* to fix the main  */
+    position: fixed;
+    left: 20%;
+    /* top: 12vh; */
+}
+
+.dashboard-container {
+    width: 100%;
+    height: 88vh;
+    background-color: #F4F6F9;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-y: auto;
+}
+
+/* ======================================= */
+.dashboard-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* ============================================= */
+.dashbord-content {
+    width: 95%;
+    /* height: 600px; */
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    /* overflow-y: scroll; */
+}
+
+.application-dashboard {
+    margin-top: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.application-dashboard h1 {
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+.application-dashboard-box {
+    width: 95%;
+    /* background-color: aqua; */
+    margin: 0px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 30px;
+}
+
+.application-dashboard-box .box {
+    width: 250px;
+    height: 180px;
+    background-color: #F2F8FF;
+    border-radius: 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+.application-dashboard-box .box:nth-child(1) {
+    background-color: #F2F8FF #F5FBF8;
+}
+
+.application-dashboard-box .box:nth-child(1):hover {
+    outline: 1px solid #0870FF;
+}
+
+.application-dashboard-box .box:nth-child(2) {
+    background-color: #F5FBF8;
+}
+
+.application-dashboard-box .box:nth-child(2):hover {
+    outline: 1px solid #34AD78;
+}
+
+.application-dashboard-box .box:nth-child(3) {
+    background-color: #FDF3F5;
+}
+
+.application-dashboard-box .box:nth-child(3):hover {
+    outline: 1px solid #DC143C;
+}
+
+.box-img-container {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* dashboard -> business dashboard css */
+
+.business-dashboard {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.business-dashboard h1 {
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+.business-dashboard-img-container {
+    width: 70%;
+    color: #0870FF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.business-dashboard .box {
+    height: 120px;
+}
+
+
+/* dashboard -> Hiremi-Ongoing-dashboard css */
+
+.hiremi-Ongoing-dashboard {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.hiremi-Ongoing-dashboard h1 {
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+.hiremi-dashboard-box {
+    width: 95%;
+    /* background-color: aqua; */
+    margin: 0px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hiremi-dashboard-box .box {
+    width: 210px;
+    height: 160px;
+    background-color: #F2F8FF;
+    border-radius: 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+.hiremi-dashboard-box .box p:nth-child(4) {
+    color: #B0BBC6;
+}
+
+.hiremi-dashboard-box .box span {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hiremi-dashboard-box .box p {
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+/* dashboard -> last query-summary section css */
+
+.query-summary-dashboard {
+    width: 100%;
+    background-color: #F4F6F9;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: "Poppins", sans-serif;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+}
+
+.query-summary {
+    width: 28%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.query-summary h1 {
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+.query-summary .box {
+    width: 220px;
+    height: 120px;
+    background-color: rgb(196, 196, 196);
+    border-radius: 15px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+.query-summary .box:nth-child(2) {
+    margin: 0px 0px 25px 0px;
+}
+
+.query-summary-img-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.query-summary-dashboard-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.last-query-summary {
+    background-color: white;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    border-radius: 0px 15px 15px 0px;
+
+}
+
+.last-query-summary h1 {
+    font-weight: 500;
+    padding: 20px 0px 20px 20px;
+}
+
+.last-query-summary-dashboard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.query-box {
+    width: 92%;
+    background-color: #eb8d2e0c;
+    border: 1px solid #EB8D2E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px 10px;
+
+}
+
+.query-profile {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.query-profile img {
+    width: 50px;
+}
+
+.query-profile span {
+    margin-left: 10px;
+}
+
+.query-profile span h3 {
+    font-size: 1rem;
+}
+
+.query-profile span p {
+    font-size: 0.7rem;
+    color: #A5A5A5;
+}
+
+.query-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+#query-btn,
+#resolve-btn {
+    padding: 7px 15px;
+    font-size: 0.7rem;
+    border: 1px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#resolve-btn {
+    background-color: #34AD78;
+    border: 1px solid #34AD78;
+    color: white;
+}
+
+#query-view-all-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#query-view-all-btn button {
+    margin: 40px 0px;
+    font-size: 0.8rem;
+    padding: 7px 15px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+
+
+
+/*  */
+
+.active-user-dashboard {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+}
+
+.active-user-graph-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.active-user-graph-img img {
+    width: 95%;
+}
+
+.active-user-dashboard h1 {
+    padding: 10px 30px;
+
+}
+
+.active-user-dashboard p {
+    padding: 10px 30px;
+}
+
+/* got to top button css */
+
+.goto-top-btn {
+    width: 100%;
+    background-color: #F4F6F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.goto-top-btn a img {
+    width: 17px;
+}
+
+.goto-top-btn a {
+    margin: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 7px 15px;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+
+/* ================ app download status section ======== */
+
+.app-download-status-content {
+    width: 95%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.download-status-container {
+    width: 96%;
+    font-family: "Poppins", sans-serif;
+}
+
+.download-status-heading {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0px 15px 0px;
+}
+
+.download-status-heading h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#download-app-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #098CE3;
+    border: 1px solid #098CE3;
+    padding: 8px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.download-status-heading #download-app-btn img {
+    width: 13px;
+}
+
+.download-status-heading #download-app-btn p {
+    font-size: 0.85rem;
+    color: white;
+}
+
+.download-status-container span p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.download-status-buttons {
+    width: 100%;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: white;
+    margin: 0px 0px 20px 0px;
+}
+
+.download-status-buttons button {
+    padding: 4px 25px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.download-status-list-container {
+    width: 100%;
+    /* background-color: yellow; */
+}
+
+.download-status-list-heading {
+    background-color: #F4F6F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 17px 0px;
+    border-radius: 7px;
+}
+
+.download-status-list-heading p {
+    width: 17%;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: baseline;
+}
+
+.download-status-list {
+    width: 100%;
+}
+
+.states-list-item {
+    background-color: white;
+    border-bottom: 1px solid #F4F6F9;
+}
+
+.states-list-item ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: white;
+    padding: 17px 0px;
+}
+
+.states-list-item ul li {
+    width: 14%;
+    list-style: none;
+    display: flex;
+    justify-content: baseline;
+}
