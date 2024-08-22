@@ -13,7 +13,7 @@ const sideNavIcon = document.querySelectorAll(".side-navbar-container li a i")
 // console.log(sideNavIcon);
 
 
-function displayNone() {
+function liDisplayNone() {
     sideNavOption.forEach((span) => {
         span.style.display = "none"
     });
@@ -21,7 +21,7 @@ function displayNone() {
         h1.style.display = "none"
     })
 }
-function displayBlock() {
+function liDisplayBlock() {
     sideNavOption.forEach((span) => {
         span.style.display = "block"
     });
@@ -33,14 +33,14 @@ function displayBlock() {
 doctToRight.addEventListener("click", () => {
     if (sideNav.style.width === "60px") {
         sideNav.style.width = "100%"
-        displayBlock()
+        liDisplayBlock()
         sideNavIcon.forEach((icon) => {
             icon.classList.remove("active")
         })
     }
     else {
         sideNav.style.width = "60px"
-        displayNone()
+        liDisplayNone()
         sideNavIcon.forEach((icon) => {
             icon.classList.add("active")
             icon.style.marginLeft = "10px"
@@ -51,11 +51,75 @@ doctToRight.addEventListener("click", () => {
 
 
 // to go-to top of the dashboard
-function scrollTotop(){
+function scrollTotop() {
     // console.log("clicked");
     document.querySelector(".dashboard-container").scrollTo({
-        top:0,
-        behavior:"smooth"
+        top: 0,
+        behavior: "smooth"
     });
 }
+
+
+
+// to change the pages with navbar
+const pages = document.querySelectorAll("[data-page]")
+const navLink = document.querySelectorAll("[data-nav-link]")
+
+function removeNavbarStyle() {
+    navLink.forEach((li) => {
+        li.style.color = "#575E6A"
+        li.parentElement.style.backgroundColor = "#ffffff"
+        li.parentElement.style.borderLeft = "none"
+    })
+}
+
+navLink.forEach((link) => {
+    // console.log(link.lastElementChild.innerHTML.toLowerCase());
+
+    link.addEventListener("click", () => {
+
+        removeNavbarStyle();
+        link.style.color = "#C1272D"
+        link.parentElement.style.backgroundColor = "#F4F6F9"
+        link.parentElement.style.borderLeft = "4px solid #C1272D"
+
+
+        pages.forEach((page) => {
+            if (link.lastElementChild.innerHTML.toLowerCase() === page.dataset.page) {
+                page.style.display = "block"
+                scrollTotop()
+            }
+
+            else {
+                page.style.display = "none"
+            }
+        })
+    })
+})
+
+
+
+
+
+
+// to show the table
+
+const boxLink = document.querySelectorAll("[box-link]")
+const tableId = document.querySelectorAll("[table-id]")
+
+boxLink.forEach((box) => {
+
+    box.addEventListener("click", (evt) => {
+
+        tableId.forEach((id) => {
+            if (box.getAttribute("box-link").toLocaleLowerCase() === id.getAttribute("table-id").toLocaleLowerCase()) {
+
+                id.style.display = "block"
+            }
+            else {
+                id.style.display = "none"
+            }
+        })
+    })
+})
 

@@ -73,10 +73,10 @@
 
                         </div>
                         <div class="resend-otp-box">
-                            <form action="" method="post">
-                            <p>Didn’t received OTP?</p>
-                            <button>Resend otp</button>
-                        </form>
+                            
+                            {% comment %} <p>Didn’t received OTP?</p>
+                            <a href="{% url "resend_otp" %}">Resend otp</a> {% endcomment %}
+                            
                         </div>
                     </div>
 

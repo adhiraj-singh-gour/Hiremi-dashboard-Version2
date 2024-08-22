@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static "\css\dashboard.css" %}">
-    <link rel="stylesheet" href="{% static "\Assets\css\utility.css" %}">
+    <link rel="stylesheet" href="{% static "css\dashboard.css" %}">
+    <link rel="stylesheet" href="{% static "Assets\css\utility.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -16,13 +21,13 @@
         <div class="header-container">
 
             <div class="dash-company-logo-box">
-                <img src="{% static "images/logo.png" %}" alt="">
+                <img src="images/logo.png" alt="">
                 <span><i class='bx bx-dock-left' id="dock-to-left"></i></span>
             </div>
 
             <div class="search-box-container">
                 <div class="searchbar-box">
-                    <span><img src="{% static "images/frame_inspect.png" %}" alt=""></span>
+                    <span><img src="images/frame_inspect.png" alt=""></span>
                     <input type="text" placeholder="Search">
                 </div>
             </div>
@@ -30,7 +35,7 @@
             <div class="profile-content-container">
 
                 <div class="notification-unread-icon">
-                    <img src="{% static "images/notifications_unread.png" %}" alt="">
+                    <img src="images/notifications_unread.png" alt="">
                 </div>
 
                 <div class="separator"></div>
@@ -42,7 +47,7 @@
                 <div class="separator"></div>
 
                 <div class="profile-content">
-                    <img src="{% static "images/person_4.png" %}" alt="">
+                    <img src="images/person_4.png" alt="">
                     <div class="admin-name">
                         <h4>Super Admin</h4>
                         <p>Logged In</p>
@@ -56,28 +61,71 @@
     </header>
 
     <article id="dash-board-body-wrap">
+
+
+        <!-- side nav bar -->
         <nav id="Side-Navbar">
             <div class="side-navbar-container">
 
                 <div class="side-nav-flex">
                     <h1>MAIN</h1>
                     <ul>
-                        <li> <!-- border-left -->
-                            <a href="{% url "dashboard" %}">
+                        <li style="border-left: 4px solid #C1272D;"> <!-- border-left -->
+                            <a href="#" data-nav-link style="color: #C1272D;">
                                 <i class='bx bx-grid-alt'></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" data-nav-link>
                                 <i class='bx bxs-bar-chart-alt-2'></i>
                                 <span>Analytics</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" data-nav-link>
                                 <i class='bx bx-download'></i>
                                 <span>App Download Status</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-nav-link>
+                                <i class='bx bx-spreadsheet'></i>
+                                <span>Total Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-nav-link>
+                                <i class='bx bx-badge-check'></i>
+                                <span>Verified Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-nav-link>
+                                <i class='bx bx-error-alt'></i>
+                                <span>Not Verified Users</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="navbar-separator"></div><!-- navbar-separator -->
+
+                <div class="oraganisation side-nav-flex">
+                    <h1>ORGANISATION</h1>
+                    <ul>
+                        <li>
+                            <a href="#" data-nav-link>
+                                <i class='bx bx-list-ul'></i>
+                                <span>Total Companies Listed</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" data-nav-link>
+                                <i class='bx bx-receipt'></i>
+                                <span>Total HR Recruiters</span>
                             </a>
                         </li>
                     </ul>
@@ -85,44 +133,45 @@
 
                 <div class="navbar-separator"></div><!-- navbar-separator -->
 
+
                 <div class="Hiremi-program side-nav-flex">
                     <h1>HIREMI'S PROGRAMS</h1>
                     <ul>
                         <li>
-                            <a href="{% url "mentorship" %}">
+                            <a href="#" data-nav-link>
                                 <i class='bx bx-support'></i>
                                 <span>Mentorship</span>
                             </a>
 
                         </li>
                         <li>
-                            <a href="{% url "internship" %}">
+                            <a href="#" data-nav-link>
                                 <i class='bx bxs-spa'></i>
                                 <span>Internship</span>
                             </a>
 
                         </li>
                         <li>
-                            <a href="{% url "fresher_Job" %}">
+                            <a href="#" data-nav-link>
                                 <i class='bx bxs-briefcase-alt-2'></i>
                                 <span>Fresher Job</span>
                             </a>
 
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" data-nav-link>
                                 <i class='bx bxs-graduation'></i>
                                 <span>Experienced Job</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{% url "corporate_training" %}">
+                            <a href="#" data-nav-link>
                                 <i class='bx bx-bar-chart-alt'></i>
                                 <span>Corporate Training </span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" data-nav-link>
                                 <i class='bx bx-wifi'></i>
                                 <span>Training</span>
                             </a>
@@ -136,16 +185,16 @@
                     <h1>MORE & ADMIN SETTING</h1>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="#" data-nav-link>
                                 <i class='bx bx-file'></i>
                                 <span>Project Report</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="#" data-nav-link>
                                 <i class='bx bx-cog'></i>
-                                <span>Project Report</span>
+                                <span>Admin Settings</span>
                             </a>
                         </li>
                     </ul>
@@ -155,13 +204,18 @@
         </nav>
 
 
+
+
         <!--  DASHBOARD PAGE -->
         <main>
             <section id="dashboard-page" style="background-color:yellow;">
 
                 <div class="dashboard-container"><!-- scroll -->
 
-                    <div class="dashbord-content" style="display: none;"><!-- content container -->
+                    <!-- dashboard -->
+
+                    <div class="dashbord-content" data-page="dashboard" style="display: none;">
+                        <!-- content container -->
 
                         <div class="application-dashboard">
                             <h1>Application Dashboard</h1>
@@ -169,14 +223,14 @@
 
                                 <div class="box">
                                     <div class="box-img-container">
-                                        <img src="{% static "/images/registration.png" %}" class="dashboard-icon-img"
+                                        <img src="../Assets/images/registration.png" class="dashboard-icon-img"
                                             alt=""><!-- icon image -->
 
                                         <span>
                                             <p class="green-btn">Goal Completed: 30% <img
-                                                    src="{% static "/images/arrow_warm_up.png" %}" alt=""></p>
+                                                    src="../Assets/images/arrow_warm_up.png" alt=""></p>
                                             <p class="red-btn">Goal Remaining: 70% <img
-                                                    src="{% static "/images/crisis_alert.png" %}" alt=""></p>
+                                                    src="../Assets/images/crisis_alert.png" alt=""></p>
                                         </span>
 
                                     </div>
@@ -192,14 +246,14 @@
 
                                 <div class="box">
                                     <div class="box-img-container">
-                                        <img src="{% static "/images/verified.png" %}" class="dashboard-icon-img"
+                                        <img src="../Assets/images/verified.png" class="dashboard-icon-img"
                                             alt=""><!-- icon image -->
 
                                         <span>
                                             <p class="green-btn">Goal Completed: 30% <img
-                                                    src="{% static "/images/arrow_warm_up.png" %}" alt=""></p>
+                                                    src="../Assets/images/arrow_warm_up.png" alt=""></p>
                                             <p class="red-btn">Goal Remaining: 70% <img
-                                                    src="{% static "/images/crisis_alert.png" %}" alt=""></p>
+                                                    src="../Assets/images/crisis_alert.png" alt=""></p>
                                         </span>
 
                                     </div>
@@ -215,14 +269,14 @@
 
                                 <div class="box">
                                     <div class="box-img-container">
-                                        <img src="{% static "/images/error.png" %}" class="dashboard-icon-img"
+                                        <img src="../Assets/images/error.png" class="dashboard-icon-img"
                                             alt=""><!-- icon image -->
 
                                         <span>
                                             <p class="green-btn">Goal Completed: 30% <img
-                                                    src="{% static "/images/arrow_warm_up.png" %}" alt=""></p>
+                                                    src="../Assets/images/arrow_warm_up.png" alt=""></p>
                                             <p class="red-btn">Goal Remaining: 70% <img
-                                                    src="{% static "/images/crisis_alert.png" %}" alt=""></p>
+                                                    src="../Assets/images/crisis_alert.png" alt=""></p>
                                         </span>
 
                                     </div>
@@ -250,7 +304,7 @@
                                 <div class="box">
 
                                     <div class="business-dashboard-img-container">
-                                        <img src="{% static "/images/tie-up.png" %}" class="dashboard-icon-img" alt="">
+                                        <img src="../Assets/images/tie-up.png" class="dashboard-icon-img" alt="">
                                         <p style="color: #0870FF;">Total Tie Up(s)</p>
                                     </div>
 
@@ -261,7 +315,7 @@
                                 <div class="box">
 
                                     <div class="business-dashboard-img-container">
-                                        <img src="{% static "/images/staff.png" %}" class="dashboard-icon-img" alt="">
+                                        <img src="../Assets/images/staff.png" class="dashboard-icon-img" alt="">
                                         <p style="color: #34AD78;">Total Staff</p>
                                     </div>
 
@@ -272,7 +326,7 @@
                                 <div class="box">
 
                                     <div class="business-dashboard-img-container">
-                                        <img src="{% static "/images/total-hr.png" %}" class="dashboard-icon-img" alt="">
+                                        <img src="../Assets/images/total-hr.png" class="dashboard-icon-img" alt="">
                                         <p style="color: #DC143C;">Total HR(s)</p>
                                     </div>
 
@@ -290,7 +344,7 @@
                             <div class="hiremi-dashboard-box">
 
                                 <div class="box">
-                                    <img src="{% static "/images/01_Internship Active Users.png" %}" alt=""
+                                    <img src="/Assets/images/01_Internship Active Users.png" alt=""
                                         class="dashboard-icon-img">
                                     <p style="color: #FF7402;">Internship: Active Users</p>
                                     <span id="content-amount">012 <p class="green-btn">+2.02% ▴</p></span>
@@ -298,7 +352,7 @@
                                 </div>
 
                                 <div class="box">
-                                    <img src="{% static "/images/02_Mentorship Active Users.png" %}" alt=""
+                                    <img src="/Assets/images/02_Mentorship Active Users.png" alt=""
                                         class="dashboard-icon-img">
                                     <p style="color: #2E3DEB;">Mentorship: Active Users</p>
                                     <span id="content-amount">012</span>
@@ -306,7 +360,7 @@
                                 </div>
 
                                 <div class="box">
-                                    <img src="{% static "/images/03_Experienced Job Active Users.png" %}" alt=""
+                                    <img src="/Assets/images/03_Experienced Job Active Users.png" alt=""
                                         class="dashboard-icon-img">
                                     <p style="color: #CB46BC;">Experienced Job: Active Users</p>
                                     <span id="content-amount">012</span>
@@ -316,7 +370,7 @@
 
 
                                 <div class="box">
-                                    <img src="{% static "/images/06_Training Active Users.png" %}" alt=""
+                                    <img src="/Assets/images/06_Training Active Users.png" alt=""
                                         class="dashboard-icon-img">
                                     <p style="color: #0870FF;">Training: Active Users</p>
                                     <span id="content-amount">012</span>
@@ -324,7 +378,7 @@
                                 </div>
 
                                 <div class="box">
-                                    <img src="{% static "/images/04_Corporate Training Active Users.png" %}" alt=""
+                                    <img src="/Assets/images/04_Corporate Training Active Users.png" alt=""
                                         class="dashboard-icon-img">
                                     <p style="color: #09C0B5;">Corporate Training: Active Users</p>
                                     <span id="content-amount">07</span>
@@ -332,7 +386,7 @@
                                 </div>
 
                                 <div class="box">
-                                    <img src="{% static "/images/05_Fresher Job Active Users.png" %}" alt=""
+                                    <img src="/Assets/images/05_Fresher Job Active Users.png" alt=""
                                         class="dashboard-icon-img">
                                     <p style="color: #FC423B;">Fresher Job: Active Users</p>
                                     <span id="content-amount">012 <p class="red-btn">-1.02% ▾</p></span>
@@ -353,7 +407,7 @@
 
                                     <div class="box">
                                         <div class="query-summary-img-container">
-                                            <img src="{% static "/images/01_query.png" %}" alt="" class="dashboard-icon-img">
+                                            <img src="/Assets/images/01_query.png" alt="" class="dashboard-icon-img">
                                             <p>Pending Queries</p>
                                         </div>
                                         <p id="content-amount">05</p>
@@ -361,7 +415,7 @@
 
                                     <div class="box">
                                         <div class="query-summary-img-container">
-                                            <img src="{% static "/images/02_query.png" %}" alt="" class="dashboard-icon-img">
+                                            <img src="/Assets/images/02_query.png" alt="" class="dashboard-icon-img">
                                             <p style="color: #34AD78;">Resolved Queries</p>
                                         </div>
                                         <p id="content-amount">052</p>
@@ -378,7 +432,7 @@
 
                                     <div class="query-box">
                                         <div class="query-profile">
-                                            <img src="{% static "/images/last-client-query.png" %}" alt="">
+                                            <img src="/Assets/images/last-client-query.png" alt="">
                                             <span>
                                                 <h3>john Smith</h3>
                                                 <p>johnsmith@gmail.com</p>
@@ -392,7 +446,7 @@
 
                                     <div class="query-box">
                                         <div class="query-profile">
-                                            <img src="{% static "/images/last-client-query.png" %}" alt="">
+                                            <img src="/Assets/images/last-client-query.png" alt="">
                                             <span>
                                                 <h3>john Smith</h3>
                                                 <p>johnsmith@gmail.com</p>
@@ -406,7 +460,7 @@
 
                                     <div class="query-box">
                                         <div class="query-profile">
-                                            <img src="{% static "/images/last-client-query.png" %}" alt="">
+                                            <img src="/Assets/images/last-client-query.png" alt="">
                                             <span>
                                                 <h3>john Smith</h3>
                                                 <p>johnsmith@gmail.com</p>
@@ -436,28 +490,29 @@
                             <h1>Active Users (Ongoing Programs)</h1>
                             <p>Visual Graph Representation</p>
                             <div class="active-user-graph-img">
-                                <img src="{% static "/Assets/images/acitve-user-graph.png" %}" alt="graph">
+                                <img src="/Assets/images/acitve-user-graph.png" alt="graph">
                             </div>
                         </div>
 
                         <!-- add dashboard container -->
                         <div class="goto-top-btn">
                             <a href="#dashboard-page" onclick="scrollTotop()">
-                                <img src="{% static "/Assets/images/goto-top-btn.png" %}" alt="">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
                                 <p>Go to Top</p>
                             </a>
                         </div>
 
                     </div>
 
+                    <!-- app download status -->
 
-                    <div class="app-download-status-content">
+                    <div class="app-download-status-content" data-page="app download status" style="display: none;">
 
                         <div class="download-status-container">
                             <div class="download-status-heading">
                                 <h1>State Rankings: Downloads, Verified and Not Verified Users</h1>
                                 <button id="download-app-btn">
-                                    <img src="{% static "/images/download-app-btn.png" %}" alt="">
+                                    <img src="/Assets/images/download-app-btn.png" alt="">
                                     <p>Download App</p>
                                 </button>
                             </div>
@@ -469,22 +524,22 @@
                             <div class="download-status-buttons">
 
                                 <button id="verified-user-btn">
-                                    <img src="{% static "/images/verified.png" %}" alt="verified-img">
+                                    <img src="/Assets/images/verified.png" alt="verified-img">
                                     <p>Verified Users</p>
                                 </button>
 
                                 <button id="non-verified-user-btn">
-                                    <img src="{% static "/images/error.png" %}" alt="non-verified-img">
+                                    <img src="/Assets/images/error.png" alt="non-verified-img">
                                     <p>Not Verified Users</p>
                                 </button>
 
                                 <button id="app-download-status-btn">
-                                    <img src="{% static "/images/app-download-moble-img.png" %}" alt="">
+                                    <img src="/Assets/images/app-download-moble-img.png" alt="">
                                     <p>App Downloads</p>
                                 </button>
 
                                 <button id="sort-btn">
-                                    <img src="{% static "/images/swap_vert.png" %}" alt="">
+                                    <img src="/Assets/images/swap_vert.png" alt="">
                                     <p>Sort</p>
                                 </button>
 
@@ -769,7 +824,1567 @@
 
                         <div class="goto-top-btn">
                             <a href="#dashboard-page" onclick="scrollTotop()">
-                                <img src="{% static "/images/goto-top-btn.png" %}" alt="">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- total users -->
+
+                    <div class="total-user-content" data-page="total users" style="display: none;">
+
+                        <div class="total-user-input-container">
+                            <h1>Search in Total User</h1>
+                            <div class="input-container">
+                                <span><img src="/Assets/images/frame_inspect.png" alt=""><input type="text"
+                                        id="user-search" placeholder="Search"></span>
+                                <button id="search">Search<i class='bx bx-right-arrow-alt'></i></button>
+                            </div>
+                        </div>
+
+                        <div class="total-user-container">
+                            <div class="total-user-heading">
+                                <h1>Total User</h1>
+                                <p>Table Representation</p>
+                            </div>
+                            <div class="sorting-btns">
+                                <button id="Default"><img src="/Assets/images/swap_vert.png" alt="">Default</button>
+                                <button id="Branch"><img src="/Assets/images/swap_vert.png" alt="">Branch</button>
+                                <button id="College"><img src="/Assets/images/swap_vert.png" alt="">College</button>
+                                <button id="State"><img src="/Assets/images/swap_vert.png" alt="">State</button>
+                                <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                            </div>
+
+                            <div class="total-user-list"><!-- scroll -->
+
+                                <div class="user-list-table">
+                                    <div class="user-list-item-heading">
+                                        <p>S.No</p>
+                                        <p>UTR No.</p>
+                                        <p>Name</p>
+                                        <p>Email</p>
+                                        <p>Phone No.</p>
+                                        <p>Gender</p>
+                                        <p>Profile</p>
+                                        <p>Birth State</p>
+                                        <p>College State</p>
+                                        <p>Passing Year</p>
+                                        <p>Account Creation Date</p>
+                                        <div class="status-action-btn">
+                                            <p>Status</p>
+                                            <p>Action</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="user-list-item">
+                                        <p>1</p>
+                                        <p>sfgsdlk****</p>
+                                        <p>Mukesh Dwivedi</p>
+                                        <p>mukesh@google.com</p>
+                                        <p>1546258764</p>
+                                        <p>Male</p>
+                                        <p>Web Development</p>
+                                        <p>Bhopal</p>
+                                        <p>Rewa</p>
+                                        <p>2025</p>
+                                        <p>01/09/2024</p>
+                                        <div class="status-action-btn">
+                                            <button id="select-user">Selected</button>
+                                            <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                        </div>
+                                    </div>
+                                    <div class="user-list-item">
+                                        <p>1</p>
+                                        <p>sfgsdlk****</p>
+                                        <p>Mukesh Dwivedi</p>
+                                        <p>mukesh@google.com</p>
+                                        <p>1546258764</p>
+                                        <p>Male</p>
+                                        <p>Web Development</p>
+                                        <p>Bhopal</p>
+                                        <p>Rewa</p>
+                                        <p>2025</p>
+                                        <p>01/09/2024</p>
+                                        <div class="status-action-btn">
+                                            <button id="select-user">Selected</button>
+                                            <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--  -->
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- vereified user -->
+
+                    <div class="verified-user-content" data-page="verified users" style="display:none;">
+
+                        <div class="verified-user-input-container">
+                            <h1>Search in Verified Users</h1>
+                            <div class="input-container">
+                                <span><img src="/Assets/images/frame_inspect.png" alt=""><input type="text"
+                                        id="user-search" placeholder="Search"></span>
+                                <button id="Search-btn">Search<i class='bx bx-right-arrow-alt'></i></button>
+                            </div>
+                        </div>
+
+                        <div class="verified-user-container">
+                            <div class="verified-user-heading">
+                                <h1>Verified Users</h1>
+                                <p>Table Representation</p>
+                            </div>
+
+                            <div class="sorting-btns">
+                                <button id="Default"><img src="/Assets/images/swap_vert.png" alt="">Default</button>
+                                <button id="Branch"><img src="/Assets/images/swap_vert.png" alt="">Branch</button>
+                                <button id="College"><img src="/Assets/images/swap_vert.png" alt="">College</button>
+                                <button id="State"><img src="/Assets/images/swap_vert.png" alt="">State</button>
+                                <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                            </div>
+
+                            <div class="verified-user-list">
+                                <div class="user-list-table">
+                                    <div class="user-list-item-heading">
+                                        <p>S.No</p>
+                                        <p>UTR No.</p>
+                                        <p>Name</p>
+                                        <p>Email</p>
+                                        <p>Phone No.</p>
+                                        <p>Gender</p>
+                                        <p>Profile</p>
+                                        <p>Birth State</p>
+                                        <p>College State</p>
+                                        <p>Passing Year</p>
+                                        <p>Account Creation Date</p>
+                                        <div class="status-action-btn">
+                                            <p>Status</p>
+                                            <p>Action</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="user-list-item">
+                                        <p>1</p>
+                                        <p>sfgsdlk****</p>
+                                        <p>Mukesh Dwivedi</p>
+                                        <p>mukesh@google.com</p>
+                                        <p>1546258764</p>
+                                        <p>Male</p>
+                                        <p>Web Development</p>
+                                        <p>Bhopal</p>
+                                        <p>Rewa</p>
+                                        <p>2025</p>
+                                        <p>01/09/2024</p>
+                                        <div class="status-action-btn">
+                                            <button id="select-user">Selected</button>
+                                            <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                        </div>
+                                    </div>
+                                    <div class="user-list-item">
+                                        <p>1</p>
+                                        <p>sfgsdlk****</p>
+                                        <p>Mukesh Dwivedi</p>
+                                        <p>mukesh@google.com</p>
+                                        <p>1546258764</p>
+                                        <p>Male</p>
+                                        <p>Web Development</p>
+                                        <p>Bhopal</p>
+                                        <p>Rewa</p>
+                                        <p>2025</p>
+                                        <p>01/09/2024</p>
+                                        <div class="status-action-btn">
+                                            <button id="pending-btn">Pending</button>
+                                            <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                        </div>
+                                    </div>
+                                    <div class="user-list-item">
+                                        <p>1</p>
+                                        <p>sfgsdlk****</p>
+                                        <p>Mukesh Dwivedi</p>
+                                        <p>mukesh@google.com</p>
+                                        <p>1546258764</p>
+                                        <p>Male</p>
+                                        <p>Web Development</p>
+                                        <p>Bhopal</p>
+                                        <p>Rewa</p>
+                                        <p>2025</p>
+                                        <p>01/09/2024</p>
+                                        <div class="status-action-btn">
+                                            <button id="rejected-btn">Rejected</button>
+                                            <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                        </div>
+                                    </div>
+                                    <!-- add list item -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- not verified user -->
+
+                    <div class="not-verified-user-content" data-page="not verified users" style="display:none;">
+
+                        <div class="not-verified-user-input-container">
+                            <h1>Search in Not Verified User</h1>
+                            <div class="input-container">
+                                <span><img src="/Assets/images/frame_inspect.png" alt=""><input type="text"
+                                        id="user-search" placeholder="Search"></span>
+                                <button id="Search-btn">Search<i class='bx bx-right-arrow-alt'></i></button>
+                            </div>
+                        </div>
+
+                        <div class="not-verified-user-container">
+                            <div class="not-verified-user-heading">
+                                <h1>Not-Verified User</h1>
+                                <p>Table Representation</p>
+                            </div>
+
+                            <div class="sorting-btns">
+                                <button id="Default"><img src="/Assets/images/swap_vert.png" alt="">Default</button>
+                                <button id="Branch"><img src="/Assets/images/swap_vert.png" alt="">Branch</button>
+                                <button id="College"><img src="/Assets/images/swap_vert.png" alt="">College</button>
+                                <button id="State"><img src="/Assets/images/swap_vert.png" alt="">State</button>
+                                <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                            </div>
+
+                            <div class="not-verified-user-list">
+                                <div class="user-list-table">
+                                    <div class="user-list-item-heading">
+                                        <p>S.No</p>
+                                        <p>UTR No.</p>
+                                        <p>Name</p>
+                                        <p>Email</p>
+                                        <p>Phone No.</p>
+                                        <p>Gender</p>
+                                        <p>Profile</p>
+                                        <p>Birth State</p>
+                                        <p>College State</p>
+                                        <p>Passing Year</p>
+                                        <p>Account Creation Date</p>
+                                        <div class="status-action-btn">
+                                            <p>Status</p>
+                                            <p>Action</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="user-list-item">
+                                        <p>1</p>
+                                        <p>sfgsdlk****</p>
+                                        <p>Mukesh Dwivedi</p>
+                                        <p>mukesh@google.com</p>
+                                        <p>1546258764</p>
+                                        <p>Male</p>
+                                        <p>Web Development</p>
+                                        <p>Bhopal</p>
+                                        <p>Rewa</p>
+                                        <p>2025</p>
+                                        <p>01/09/2024</p>
+                                        <div class="status-action-btn">
+                                            <button id="select-user">Selected</button>
+                                            <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                        </div>
+                                    </div>
+                                    <div class="user-list-item">
+                                        <p>1</p>
+                                        <p>sfgsdlk****</p>
+                                        <p>Mukesh Dwivedi</p>
+                                        <p>mukesh@google.com</p>
+                                        <p>1546258764</p>
+                                        <p>Male</p>
+                                        <p>Web Development</p>
+                                        <p>Bhopal</p>
+                                        <p>Rewa</p>
+                                        <p>2025</p>
+                                        <p>01/09/2024</p>
+                                        <div class="status-action-btn">
+                                            <button id="select-user">Selected</button>
+                                            <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                        </div>
+                                    </div>
+                                    <div class="user-list-item">
+                                        <p>1</p>
+                                        <p>sfgsdlk****</p>
+                                        <p>Mukesh Dwivedi</p>
+                                        <p>mukesh@google.com</p>
+                                        <p>1546258764</p>
+                                        <p>Male</p>
+                                        <p>Web Development</p>
+                                        <p>Bhopal</p>
+                                        <p>Rewa</p>
+                                        <p>2025</p>
+                                        <p>01/09/2024</p>
+                                        <div class="status-action-btn">
+                                            <button id="select-user">Selected</button>
+                                            <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                        </div>
+                                    </div>
+                                    <!-- add list item -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Mentorship -->
+
+                    <div class="mentorship-content" data-page="mentorship" style="display: none;">
+
+                        <div class="mentorship-content-container">
+                            <h1>Continue creating more mentorship opportunities.</h1>
+                            <button id="Create-btn">Create Mentorship</button>
+                        </div>
+
+                        <div class="mentorship-summary-container">
+                            <h1>Mentorship Summary</h1>
+                            <div class="mentorship-summary-box">
+
+                                <div class="box" box-link="Mentorship applied">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/02_Mentorship Active Users.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <p>Mentorship Applied</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <p id="content-amount">06</p>
+                                    <p>This Month:<span>+02 Mentorship Applied</span></p>
+                                </div>
+
+                                <div class="box" box-link="Mentorship Under Review Candidates">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/02_under-review.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <p>Under Review Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <p id="content-amount">06</p>
+                                    <p>This Month:<span>+02 Mentorship Applied</span></p>
+                                </div>
+
+                                <div class="box" box-link="Mentorship Selected Candidates">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/03_selected.png" alt="" class="dashboard-icon-img">
+                                            <p>Selected Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <p id="content-amount">06</p>
+                                    <p>This Month:<span>+02 Mentorship Applied</span></p>
+                                </div>
+
+                                <div class="box" box-link="Mentorship Rejected Candidates">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/04_rejected.png" alt="" class="dashboard-icon-img">
+                                            <p>Rejected Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <p id="content-amount">06</p>
+                                    <p>This Month:<span>+02 Mentorship Applied</span></p>
+                                </div>
+
+                                <!-- <div class="box"></div> -->
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- mentorship -> table 1 -->
+                        <div class="mentorship-table-data" id="mentorship-applied" style="display: none;"
+                            table-id="Mentorship Applied">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Mentorship Applied</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mentorship -> table 2 -->
+                        <div class="mentorship-table-data" id="under-review-Candidates" style="display: none;"
+                            table-id="Mentorship Under Review Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Under Review Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mentorship -> table 3 -->
+                        <div class="mentorship-table-data" id="Selected-Candidates" style="display: none;"
+                            table-id="Mentorship Selected Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Selected Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mentorship -> table 4 -->
+                        <div class="mentorship-table-data" id="Rejected-Candidates" style="display: none;"
+                            table-id="Mentorship Rejected Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Under Review Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- mentorship ->> mentorship status container -->
+
+                        <div class="mentorship-status-container">
+                            <h1>Mentorship Status</h1>
+                            <div class="mentorship-status-box">
+
+                                <div class="box" box-link="Mentorship Ongoing Mentorship">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/05_ongoing.png" alt="" class="dashboard-icon-img">
+                                            <p>Open/Ongoing Mentorship</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <p id="content-amount">06</p>
+                                    <p>This Month:<span>+02 Mentorship Applied</span></p>
+                                </div>
+
+                                <div class="box" box-link="Mentorship Number of Roles">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/06_roles.png" alt="" class="dashboard-icon-img">
+                                            <p>Number of Roles</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <p id="content-amount">06</p>
+                                    <p>This Month:<span>+02 Mentorship Applied</span></p>
+                                </div>
+                                <!-- <div class="box"></div> -->
+
+                            </div>
+                        </div>
+
+                        <!-- mentorship -> table 5 -->
+                        <div class="mentorship-table-data" id="Rejected-Candidates" style="display: none;"
+                            table-id="Mentorship Ongoing Mentorship">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Open/Ongoing Mentorship </h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- mentorship -> table 6 -->
+                        <div class="mentorship-table-data" id="Rejected-Candidates" style="display: none;"
+                            table-id="Mentorship Number of Roles">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Number of Roles</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+                        <!-- add mentorship content -->
+                    </div>
+
+
+                    <!-- Internship -->
+
+                    <div class="internship-content" data-page="internship" style="display: none;">
+                        <div class="internship-content-container">
+                            <span>
+                                <img src="/Assets/images/grade.png" alt="">
+                                <h1>Continue creating more internship opportunities.</h1>
+                            </span>
+                            <button id="Create-btn">Create Internship</button>
+                        </div>
+
+                        <div class="internship-summary-container">
+                            <h1>Internship Summary</h1>
+
+                            <div class="internship-summary-box">
+                                <div class="box" box-link="Internship Applied">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/01_Internship Active Users.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <p>Internship Applied</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div style="font-size: 2.4rem;">012 <span id="increasing-btn">+2.02% ▴</span>
+                                    </div>
+
+                                    <p>This Month: <span>+05 Internship Applied</span></p>
+
+                                </div>
+
+                                <div class="box" box-link="internship Under Review Candidates">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/02_under-review.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <p>Under Review Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">02</div>
+
+                                    <p>This Month: <span>+02 Candidates</span></p>
+                                </div>
+
+                                <div class="box" box-link="internship Selected Candidates">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/03_selected.png" alt="" class="dashboard-icon-img">
+                                            <p>Selected Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">012</div>
+
+                                    <p>This Month: <span>+08 Candidates</span></p>
+                                </div>
+
+                                <div class="box" box-link="internship Rejected Candidates">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/04_rejected.png" alt="" class="dashboard-icon-img">
+                                            <p>Rejected Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">012</div>
+
+                                    <p>This Month: <span>+01 Candidates</span></p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- four table -->
+                        <div class="mentorship-table-data" id="Internship-Applied" style="display:none ;"
+                            table-id="Internship Applied">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Internship Applied</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Internship-Under-Review Candidates"
+                            style="display:none ;" table-id="internship Under Review Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Under Review Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Internship-Selected-Candidates" style="display:none ;"
+                            table-id="internship Selected Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Selected Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Internship-Rejected-Candidates" style="display:none ;"
+                            table-id="internship Rejected Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Rejected Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="internship-status-container">
+                            <h1>Internship Status</h1>
+
+                            <div class="internship-status-box">
+
+                                <div class="box" box-link="internship Ongoing Internships">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/05_ongoing.png" alt="" class="dashboard-icon-img">
+                                            <p>Open/Ongoing Internships</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div style="font-size: 2.4rem;">012 <span id="increasing-btn">+2.02% ▴</span>
+                                    </div>
+
+                                    <p>This Month: <span>+05 Internship Applied</span></p>
+
+                                </div>
+
+                                <div class="box" box-link="internship Number of Roles">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/06_roles.png" alt="" class="dashboard-icon-img">
+                                            <p>Number of Roles</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">02</div>
+
+                                    <p>This Month: <span>+02 Candidates</span></p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- two table -->
+                        <div class="mentorship-table-data" id="Internship-Open/Ongoing Internships"
+                            style="display:none ;" table-id="internship Ongoing Internships">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Open/Ongoing Internships</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mentorship-table-data" id="Internship-Number-of-Roles" style="display:none ;"
+                            table-id="internship Number of Roles">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Number of Roles</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- fresher job -->
+
+
+
+                    <div class="fresher-job-content" data-page="fresher job">
+
+                        <div class="fresher-job-content-container">
+                            <span>
+                                <img src="/Assets/images/grade.png" alt="">
+                                <h1>Continue creating more fresher job opportunities</h1>
+                            </span>
+                            <button id="Create-btn">Create Fresher Job</button>
+                        </div>
+
+                        <div class="fresher-job-summary-container">
+                            <h1>Fresher Job Summary</h1>
+                            <div class="fresher-job-summary-box">
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/05_Fresher Job Active Users.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <p style="color: #FC423B;">Fresher Job Applied</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">08 <p>-1.02% ▾</p>
+                                    </div>
+                                    <p>This Month: <span>+05 Fresher job Applied</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/02_under-review.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <p style="color: #098CE3;">Under Review Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">08</div>
+                                    <p>This Month: <span>+05 Fresher job Applied</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/03_selected.png" alt="" class="dashboard-icon-img">
+                                            <p style="color: #34AD78;">Fresher Job Applied</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">08</div>
+                                    <p>This Month: <span>+05 Fresher job Applied</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/04_rejected.png" alt="" class="dashboard-icon-img">
+                                            <p style="color: #DC143C;">Fresher Job Applied</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">08</div>
+                                    <p>This Month: <span>+05 Fresher job Applied</span></p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="fresher-job-status-container">
+                            <h1>Fresher Job Status</h1>
+                            <div class="fresher-job-status-box">
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/05_ongoing.png" alt="" class="dashboard-icon-img">
+                                            <p style="color: #09C0B5;">Open/Ongoing Fresher Job</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">08<p>+2.02% ▴</p>
+                                    </div>
+                                    <p>This Month: <span>+05 Fresher job Applied</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/06_roles.png" alt="" class="dashboard-icon-img">
+                                            <p style="color: #cb46bb;">Number of Roles</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">08</div>
+                                    <p>This Month: <span>+05 Fresher job Applied</span></p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
                                 <p>Go to Top</p>
                             </a>
                         </div>
@@ -779,14 +2394,11 @@
 
                     <!-- add other section -->
 
+
                 </div>
                 </div>
-
-
 
             </section>
-
-            <!-- other section are added here -->
 
         </main>
 

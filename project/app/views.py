@@ -21,7 +21,6 @@ def superuser_logout(request):
     return redirect('superuser_login')
 
 
-
 def superuser_login(request):
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -56,7 +55,6 @@ def superuser_login(request):
     return render(request, 'index.html')
 
 
-
 def otp_verify(request):
     if request.method == 'POST':
         otp_digits = [
@@ -70,17 +68,17 @@ def otp_verify(request):
         print(otp_digits)
         entered_otp = ''.join(otp_digits)
         session_otp = str(request.session.get('otp'))
-        
+
         if entered_otp == session_otp:
             email = request.session.get('superuser_email')
-            user = authenticate(request, username=email)
-            
+            user = authenticate(request, username=email, password="admin")
+
             if user is not None:
                 login(request, user)
                 # Clean up session data
                 del request.session['otp']
                 del request.session['superuser_email']
-                
+
                 # Redirect to the dashboard instead of rendering directly
                 return redirect('dashboard')  # Update with your actual dashboard URL or name
             else:
@@ -88,17 +86,16 @@ def otp_verify(request):
         else:
             # OTP is incorrect
             messages.error(request, 'Invalid OTP. Please try again.')
-    
+
     # If OTP is incorrect or request method is GET
     return render(request, 'otp-page.html')
-
 
 
 def resend_otp(request):
     if 'superuser_email' in request.session:
         email = request.session['superuser_email']  
         otp = random.randint(100000, 999999) 
-
+        print(email)
         request.session['otp'] = otp
         send_mail(
             'Your Resent OTP for Login',
