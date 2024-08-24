@@ -15,4 +15,5 @@ urlpatterns = [
     path('fresher_Job/',fresher_Job,name="fresher_Job"),
     path('corporate_training/',corporate_training,name="corporate_training"),
     
+    
 ]

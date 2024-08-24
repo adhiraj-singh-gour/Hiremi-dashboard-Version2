@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 import random
+import requests
 from django.core.mail import send_mail
 
 # =======================================================================================================
@@ -120,7 +121,14 @@ def resend_otp(request):
 
 
 def dashboard(request):
-    return render(request,"dashboard.html")
+    registrations_url = 'http://13.127.81.177:8000/api/registers/'
+    data = requests.get(registrations_url).json()
+    user_count = len(data)
+    context = {
+        'user_count': user_count,
+        # 'current_month_registrations': current_month_registrations,    
+    }
+    return render(request,"dashboard.html",context)
 
 def mentorship(request):
     return render(request,"mentorship.html")
