@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{% static "css\dashboard.css" %}">
-    <link rel="stylesheet" href="{% static "Assets\css\utility.css" %}">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Assets/css/utility.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -208,135 +207,319 @@
 
         <!--  DASHBOARD PAGE -->
         <main>
-            <section id="dashboard-page" style="background-color:yellow;">
+            <section id="dashboard-page">
 
                 <div class="dashboard-container"><!-- scroll -->
 
                     <!-- dashboard -->
-
-                    <div class="dashbord-content" data-page="dashboard" style="display: none;">
+                    <div class="dashbord-content" data-page="dashboard">
                         <!-- content container -->
 
-                        <div class="application-dashboard">
-                            <h1>Application Dashboard</h1>
-                            <div class="application-dashboard-box">
+                        <div class="main-dashboard">
 
-                                <div class="box">
-                                    <div class="box-img-container">
-                                        <img src="../Assets/images/registration.png" class="dashboard-icon-img"
-                                            alt=""><!-- icon image -->
+                            <div class="application-hr-dashboard">
 
-                                        <span>
-                                            <p class="green-btn">Goal Completed: 30% <img
-                                                    src="../Assets/images/arrow_warm_up.png" alt=""></p>
-                                            <p class="red-btn">Goal Remaining: 70% <img
-                                                    src="../Assets/images/crisis_alert.png" alt=""></p>
-                                        </span>
+                                <div class="application-dashboard">
+
+                                    <div class="application-dashoard-heading">
+                                        <h1>Application Dashboard</h1>
+                                        <span><i class='bx bx-grid-vertical'></i></span>
+                                    </div>
+                                    <span id="heading-separator"></span>
+
+                                    <div class="application-dashboard-box">
+
+                                        <div class="box">
+                                            <div class="box-img-container">
+                                                <img src="../Assets/images/registration.png" class="dashboard-icon-img"
+                                                    alt=""><!-- icon image -->
+
+                                                <span>
+                                                    <p class="green-btn">Goal Completed: 30% <img
+                                                            src="../Assets/images/arrow_warm_up.png" alt=""></p>
+                                                    <p class="red-btn">Goal Remaining: 70% <img
+                                                            src="../Assets/images/crisis_alert.png" alt="">
+                                                    </p>
+                                                </span>
+                                            </div>
+                                            <p id="content-text" style="color:#0870FF;">Total Registration</p>
+                                            <p id="content-amount">32245<span>/100000</span></p>
+                                            <span id="new-register-txt">
+                                                <div>This Month: <p>+3000 <span>New Registrations</span></p>
+                                                </div>
+                                            </span>
+                                        </div>
+
+                                        <div id="box-separator"></div>
+
+                                        <div class="box">
+                                            <div class="box-img-container">
+                                                <img src="../Assets/images/verified.png" class="dashboard-icon-img"
+                                                    alt=""><!-- icon image -->
+
+                                                <span>
+                                                    <p class="green-btn">Goal Completed: 30% <img
+                                                            src="../Assets/images/arrow_warm_up.png" alt=""></p>
+                                                    <p class="red-btn">Goal Remaining: 70% <img
+                                                            src="../Assets/images/crisis_alert.png" alt="">
+                                                    </p>
+                                                </span>
+                                            </div>
+                                            <p id="content-text" style="color:#34AD78;">Verified Users</p>
+                                            <p id="content-amount">16409<span>/100000</span></p>
+                                            <span id="new-register-txt">
+                                                <div>This Month: <p>+750 <span>New Registrations</span></p>
+                                                </div>
+                                            </span>
+                                        </div>
+
+                                        <div id="box-separator"></div>
+
+                                        <div class="box">
+                                            <div class="box-img-container">
+                                                <img src="../Assets/images/error.png" class="dashboard-icon-img"
+                                                    alt=""><!-- icon image -->
+                                            </div>
+
+                                            <p id="content-text" style="color:#DC143C;">Not Verified Users</p>
+                                            <p id="content-amount">20987<span>/100000</span></p>
+                                            <span id="new-register-txt">
+                                                <div>This Month: <p>+2250 <span>New Registrations</span></p>
+                                                </div>
+                                            </span>
+                                        </div>
 
                                     </div>
-
-                                    <p id="content-text" style="color:#0870FF;">Total Registration</p>
-                                    <p id="content-amount">{{user_count}}<span>/100000</span></p>
-                                    <span id="new-register-txt">
-                                        <p>This Month: </p>
-                                        <p>+3000</p>
-                                        <p>New Registration</p>
-                                    </span>
                                 </div>
 
-                                <div class="box">
-                                    <div class="box-img-container">
-                                        <img src="../Assets/images/verified.png" class="dashboard-icon-img"
-                                            alt=""><!-- icon image -->
+                                <div class="hr-dashboard">
+                                    <div class="hr-dashboard-heading">
+                                        <h1>HR’s Dashboard</h1>
+                                        <span><i class='bx bx-grid-vertical'></i></span>
+                                    </div>
+                                    <span id="heading-separator"></span>
 
-                                        <span>
-                                            <p class="green-btn">Goal Completed: 30% <img
-                                                    src="../Assets/images/arrow_warm_up.png" alt=""></p>
-                                            <p class="red-btn">Goal Remaining: 70% <img
-                                                    src="../Assets/images/crisis_alert.png" alt=""></p>
-                                        </span>
+                                    <div class="hr-dashboard-cards">
+
+                                        <div class="hr-dashboard-card">
+                                            <div class="hr-amount-detail">
+                                                <p>3242</p>
+                                                <i class='bx bxs-right-arrow'></i>
+                                            </div>
+                                            <p style="color: #999999;">Total</p>
+                                            <div class="hr-card-icon">
+                                                <img src="/Assets/images/total-user-icon.png" alt="">
+                                                <p>Registered HRs</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hr-dashboard-card">
+                                            <div class="hr-amount-detail">
+                                                <p>232</p>
+                                                <i class='bx bxs-right-arrow'></i>
+                                            </div>
+                                            <p style="color: #999999;">Total</p>
+                                            <div class="hr-card-icon">
+                                                <img src="/Assets/images/verified-icon.png" alt="">
+                                                <p>Verified HRs</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hr-dashboard-card">
+                                            <div class="hr-amount-detail">
+                                                <p>137</p>
+                                                <i class='bx bxs-right-arrow'></i>
+                                            </div>
+                                            <p style="color: #999999;">Total</p>
+                                            <div class="hr-card-icon">
+                                                <img src="/Assets/images/not-verified-icon.png" alt="">
+                                                <p>Not Verified HRs</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="hr-dashboard-card">
+                                            <div class="hr-amount-detail">
+                                                <p>12</p>
+                                                <i class='bx bxs-right-arrow'></i>
+                                            </div>
+                                            <p style="color: #999999;">Pending</p>
+                                            <div class="hr-card-icon">
+                                                <img src="/Assets/images/pending-icon.png" alt="">
+                                                <p>Post Approval</p>
+                                            </div>
+                                            <!--  -->
+                                            <div id="pending-notify">
+                                                <img src="/Assets/images/warning-icon.png" alt="">
+                                                <p>Action Required</p>
+                                            </div>
+                                        </div>
 
                                     </div>
-
-                                    <p id="content-text" style="color: #34AD78;">Verified Users</p>
-                                    <p id="content-amount">10000<span>/100000</span></p>
-                                    <span id="new-register-txt">
-                                        <p>This Month: </p>
-                                        <p>+750</p>
-                                        <p>verified User</p>
-                                    </span>
                                 </div>
-
-                                <div class="box">
-                                    <div class="box-img-container">
-                                        <img src="../Assets/images/error.png" class="dashboard-icon-img"
-                                            alt=""><!-- icon image -->
-
-                                        <span>
-                                            <p class="green-btn">Goal Completed: 30% <img
-                                                    src="../Assets/images/arrow_warm_up.png" alt=""></p>
-                                            <p class="red-btn">Goal Remaining: 70% <img
-                                                    src="../Assets/images/crisis_alert.png" alt=""></p>
-                                        </span>
-
-                                    </div>
-
-                                    <p id="content-text" style="color: #DC143C;">Not Verified Users</p>
-                                    <p id="content-amount">20000<span>/100000</span></p>
-                                    <span id="new-register-txt">
-                                        <p>This Month: </p>
-                                        <p>+2250</p>
-                                        <p>Not Verified User</p>
-                                    </span>
-                                </div>
-
-                                <!-- add content box -->
 
                             </div>
 
-                        </div>
 
+                            <div class="opportunities-resolved-dashboard">
+                                <div class="opportunities-dashboard">
 
-                        <div class="business-dashboard">
-                            <h1>Business Dashboard</h1>
-                            <div class="application-dashboard-box">
-
-                                <div class="box">
-
-                                    <div class="business-dashboard-img-container">
-                                        <img src="../Assets/images/tie-up.png" class="dashboard-icon-img" alt="">
-                                        <p style="color: #0870FF;">Total Tie Up(s)</p>
+                                    <div class="opportunities-heading">
+                                        <h1>Opportunities</h1>
                                     </div>
 
-                                    <p id="content-amount">012</p>
+                                    <span id="heading-separator"></span>
 
+                                    <div class="opportunities-cards">
+
+                                        <div class="opportunities-card">
+                                            <img src="/Assets/images/01_opportunities.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <div>
+                                                <p>Internships</p>
+                                                <span>3000</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="opportunities-card">
+                                            <img src="/Assets/images/02_opportunities.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <div>
+                                                <p>Fresher Job</p>
+                                                <span>1500</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="opportunities-card">
+                                            <img src="/Assets/images/03_opportunities.png" alt=""
+                                                class="dashboard-icon-img">
+                                            <div>
+                                                <p>Experienced Job</p>
+                                                <span>1000</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- add cards -->
+                                    </div>
                                 </div>
 
-                                <div class="box">
 
-                                    <div class="business-dashboard-img-container">
-                                        <img src="../Assets/images/staff.png" class="dashboard-icon-img" alt="">
-                                        <p style="color: #34AD78;">Total Staff</p>
+
+                                <div class="resolved-queries-dashboard">
+                                    <div class="resolved-query-heading">
+                                        <h1>Resolved Queries</h1>
+                                    </div>
+                                    <span id="heading-separator"></span>
+                                    <div class="resolved-query-data">
+                                        <p>352 <span>/653</span></p>
                                     </div>
 
-                                    <p id="content-amount">032</p>
-
                                 </div>
-
-                                <div class="box">
-
-                                    <div class="business-dashboard-img-container">
-                                        <img src="../Assets/images/total-hr.png" class="dashboard-icon-img" alt="">
-                                        <p style="color: #DC143C;">Total HR(s)</p>
-                                    </div>
-
-                                    <p id="content-amount">021</p>
-
-                                </div>
-
                             </div>
                         </div>
 
+
+
+                        <div class="user-dashboard">
+                            <div class="user-dashboard-heading">
+                                <h1>User's Dashboard</h1>
+                            </div>
+                            <span id="heading-separator"></span>
+
+                            <div class="user-dashboard-container">
+
+                                <div class="gender-container">
+
+                                    <div class="female-user">
+
+                                        <div class="female-count">
+                                            <h1>1345</h1>
+                                            <p>Female Users</p>
+                                        </div>
+
+                                        <div class="verified-non-verified-data">
+                                            <div class="verified-user">
+                                                <div class="verified-count">
+                                                    <h1>145</h1>
+                                                    <p>Verified</p>
+                                                </div>
+                                                <i class='bx bxs-right-arrow'></i>
+                                            </div>
+
+                                            <div class="not-verified-user">
+                                                <div class="verified-count">
+                                                    <h1>085</h1>
+                                                    <p>Not Verified</p>
+                                                </div>
+                                                <i class='bx bxs-right-arrow'></i>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="male-user">
+                                        <div class="male-count">
+                                            <h1>3242</h1>
+                                            <p>Male Users</p>
+                                        </div>
+                                        <div class="verified-non-verified-data">
+                                            <div class="verified-user">
+                                                <div class="verified-count">
+                                                    <h1>145</h1>
+                                                    <p>Verified</p>
+                                                </div>
+                                                <i class='bx bxs-right-arrow'></i>
+                                            </div>
+                                            <div class="not-verified-user">
+                                                <div class="verified-count">
+                                                    <h1>085</h1>
+                                                    <p>Not Verified</p>
+                                                </div>
+                                                <i class='bx bxs-right-arrow'></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="user-other-data-container">
+
+                                    <div class="user-data1">
+                                        <div class="interested-domain">
+                                            <p>Interested Domain</p>
+                                            <i class='bx bxs-right-arrow'></i>
+                                        </div>
+                                        <div class="branch">
+                                            <p>Branch</p>
+                                            <i class='bx bxs-right-arrow'></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="user-data2">
+                                        <div class="passing-year">
+                                            <p>Passing Year</p>
+                                            <i class='bx bxs-right-arrow'></i>
+                                        </div>
+                                        <div class="college-state">
+                                            <p>College State</p>
+                                            <i class='bx bxs-right-arrow'></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="user-data3">
+                                        <div class="degree">
+                                            <p>Degree</p>
+                                            <i class='bx bxs-right-arrow'></i>
+                                        </div>
+                                        <div class="birth-place">
+                                            <p>Birth Place</p>
+                                            <i class='bx bxs-right-arrow'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
                         <div class="hiremi-Ongoing-dashboard">
@@ -1725,6 +1908,7 @@
                             <h1>Internship Summary</h1>
 
                             <div class="internship-summary-box">
+
                                 <div class="box" box-link="Internship Applied">
                                     <div class="box-img-container">
                                         <span>
@@ -2117,7 +2301,7 @@
                         </div>
 
                         <!-- two table -->
-                        <div class="mentorship-table-data" id="Internship-Open/Ongoing Internships"
+                        <div class="mentorship-table-data" id="Internship-Open-Ongoing-Internships"
                             style="display:none ;" table-id="internship Ongoing Internships">
                             <div class="mentorship-table-data-container">
 
@@ -2189,6 +2373,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="mentorship-table-data" id="Internship-Number-of-Roles" style="display:none ;"
                             table-id="internship Number of Roles">
                             <div class="mentorship-table-data-container">
@@ -2274,12 +2459,9 @@
 
 
 
-
                     <!-- fresher job -->
 
-
-
-                    <div class="fresher-job-content" data-page="fresher job">
+                    <div class="fresher-job-content" data-page="fresher job" style="display: none;">
 
                         <div class="fresher-job-content-container">
                             <span>
@@ -2293,7 +2475,7 @@
                             <h1>Fresher Job Summary</h1>
                             <div class="fresher-job-summary-box">
 
-                                <div class="box">
+                                <div class="box" box-link="Fresher Job Applied">
                                     <div class="box-img-container">
                                         <span>
                                             <img src="/Assets/images/05_Fresher Job Active Users.png" alt=""
@@ -2307,7 +2489,7 @@
                                     <p>This Month: <span>+05 Fresher job Applied</span></p>
                                 </div>
 
-                                <div class="box">
+                                <div class="box" box-link="Fresher Under Review Candidates">
                                     <div class="box-img-container">
                                         <span>
                                             <img src="/Assets/images/02_under-review.png" alt=""
@@ -2320,11 +2502,11 @@
                                     <p>This Month: <span>+05 Fresher job Applied</span></p>
                                 </div>
 
-                                <div class="box">
+                                <div class="box" box-link="Fresher Selected Candidates">
                                     <div class="box-img-container">
                                         <span>
                                             <img src="/Assets/images/03_selected.png" alt="" class="dashboard-icon-img">
-                                            <p style="color: #34AD78;">Fresher Job Applied</p>
+                                            <p style="color: #34AD78;">Selected Candidates</p>
                                         </span>
                                         <i class='bx bx-right-arrow-alt'></i>
                                     </div>
@@ -2332,11 +2514,11 @@
                                     <p>This Month: <span>+05 Fresher job Applied</span></p>
                                 </div>
 
-                                <div class="box">
+                                <div class="box" box-link="Fresher Rejected Candidates">
                                     <div class="box-img-container">
                                         <span>
                                             <img src="/Assets/images/04_rejected.png" alt="" class="dashboard-icon-img">
-                                            <p style="color: #DC143C;">Fresher Job Applied</p>
+                                            <p style="color: #DC143C;">Rejected Candidates</p>
                                         </span>
                                         <i class='bx bx-right-arrow-alt'></i>
                                     </div>
@@ -2347,12 +2529,371 @@
                             </div>
                         </div>
 
+                        <!-- four table -->
+                        <div class="mentorship-table-data" id="Fresher-Job-Applied" style="display:none ;"
+                            table-id="Fresher Job Applied">
+                            <div class="mentorship-table-data-container">
 
-                        <div class="fresher-job-status-container">
+                                <div class="heading">
+                                    <h1>Fresher Job Applied</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Fresher-Under-Review-Candidates" style="display:none ;"
+                            table-id="Fresher Under Review Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Under Review Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Fresher-Selected-Candidates" style="display:none ;"
+                            table-id="Fresher Selected Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Selected Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Fresher-Rejected-Candidates" style="display:none ;"
+                            table-id="Fresher Rejected Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Rejected Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="fresher-job-status-container" style="display: flex;">
                             <h1>Fresher Job Status</h1>
                             <div class="fresher-job-status-box">
 
-                                <div class="box">
+                                <div class="box" box-link="Fresher Ongoing Job">
                                     <div class="box-img-container">
                                         <span>
                                             <img src="/Assets/images/05_ongoing.png" alt="" class="dashboard-icon-img">
@@ -2365,7 +2906,7 @@
                                     <p>This Month: <span>+05 Fresher job Applied</span></p>
                                 </div>
 
-                                <div class="box">
+                                <div class="box" box-link="Fresher Number of Roles">
                                     <div class="box-img-container">
                                         <span>
                                             <img src="/Assets/images/06_roles.png" alt="" class="dashboard-icon-img">
@@ -2377,6 +2918,843 @@
                                     <p>This Month: <span>+05 Fresher job Applied</span></p>
                                 </div>
 
+                            </div>
+                        </div>
+
+                        <!-- two table -->
+
+
+                        <div class="mentorship-table-data" id="Fresher-Open-Ongoing-Job" style="display:none ;"
+                            table-id="Fresher Ongoing Job">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Open/Ongoing Fresher Job</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="mentorship-table-data" id="Fresher-Number-of-Roles" style="display:none ;"
+                            table-id="Fresher Number of Roles">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Number of Roles</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="goto-top-btn">
+                            <a href="#dashboard-page" onclick="scrollTotop()">
+                                <img src="/Assets/images/goto-top-btn.png" alt="">
+                                <p>Go to Top</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- experienced job -->
+
+                    <div class="experienced-job-content" data-page="experienced job" style="display: none;">
+                        <div class="experienced-job-content-container">
+                            <span>
+                                <img src="/Assets/images/grade.png" alt="">
+                                <h1>Continue creating more experienced job opportunities.</h1>
+                            </span>
+
+                            <button id="Create-btn">Create Experienced Job</button>
+                        </div>
+
+                        <div class="experienced-job-summary-container">
+                            <h1>Experienced Job Summary</h1>
+                            <div class="experienced-job-summary-box">
+
+                                <div class="box" box-link="Experienced Job Applied">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/03_Experienced Job Active Users.png"
+                                                class="dashboard-icon-img">
+                                            <p style="color: #CB46BC;">Experienced Job Applied</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">04</div>
+                                    <p>This Month: <span>+02 Job Applied</span></p>
+                                </div>
+
+                                <div class="box" box-link="Experienced Under Review Candidates">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/02_under-review.png" class="dashboard-icon-img">
+                                            <p style="color: #098CE3;">Under Review Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">02</div>
+                                    <p>This Month: <span>+02 Job Applied</span></p>
+                                </div>
+
+                                <div class="box" box-link="Experienced Selected Candidated">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/03_selected.png" class="dashboard-icon-img">
+                                            <p style="color: #34AD78;">Selected Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">08</div>
+                                    <p>This Month: <span>+02 Job Applied</span></p>
+                                </div>
+
+                                <div class="box" box-link="Experienced Rejected Candidates">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/04_rejected.png" class="dashboard-icon-img">
+                                            <p style="color: #DC143C;">Rejected Candidates</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">02</div>
+                                    <p>This Month: <span>+02 Job Applied</span></p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- four table -->
+
+                        <div class="mentorship-table-data" id="Fresher-Job-Applied" style="display:none ;"
+                            table-id="Experienced Job Applied">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Experienced Job Applied</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Fresher-Under-Review-Candidates" style="display:none ;"
+                            table-id="Experienced Under Review Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Under Review Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Fresher-Selected-Candidates" style="display:none ;"
+                            table-id="Experienced Selected Candidated">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Selected Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentorship-table-data" id="Fresher-Rejected-Candidates" style="display:none ;"
+                            table-id="Experienced Rejected Candidates">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Rejected Candidates</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="experienced-job-status-container">
+                            <h1>Experienced Job Summary</h1>
+                            <div class="experienced-job-status-box">
+
+                                <div class="box" box-link="Experienced Ongoing Job">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/05_ongoing.png" class="dashboard-icon-img">
+                                            <p style="color: #09C0B5;">Open/Ongoing Experienced Job</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">04<p>+2.02% ▴</p>
+                                    </div>
+                                    <p>This Month: <span>+02 Job Applied</span></p>
+                                </div>
+
+                                <div class="box" box-link="Experienced Number of Roles">
+                                    <div class="box-img-container">
+                                        <span>
+                                            <img src="/Assets/images/06_roles.png" class="dashboard-icon-img">
+                                            <p style="color: #CB46BC;">Number of Roles</p>
+                                        </span>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </div>
+                                    <div id="content-amount">02</div>
+                                    <p>This Month: <span>+02 Job Applied</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- two table -->
+
+                        <div class="mentorship-table-data" id="Fresher-Open-Ongoing-Job" style="display:none ;"
+                            table-id="Experienced Ongoing Job">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Open/Ongoing Experienced Job</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="mentorship-table-data" id="Fresher-Number-of-Roles" style="display:none ;"
+                            table-id="Experienced Number of Roles">
+                            <div class="mentorship-table-data-container">
+
+                                <div class="heading">
+                                    <h1>Number of Roles</h1>
+                                    <p>Table Representation</p>
+                                </div>
+
+                                <div class="sorting-btns">
+                                    <button id="Sort"><img src="/Assets/images/swap_vert.png" alt="">Sort</button>
+                                    <button id="State"><img src="/Assets/images/filter_list.png" alt="">Filter</button>
+                                </div>
+
+                                <div class="mentorship-table"> <!-- scroll -->
+
+                                    <div class="mentorship-table-list">
+                                        <div class="table-heading">
+                                            <p>S.No</p>
+                                            <p>UTR No.</p>
+                                            <p>Name</p>
+                                            <p>Email</p>
+                                            <p>Phone No.</p>
+                                            <p>Gender</p>
+                                            <p>Profile</p>
+                                            <p>Birth State</p>
+                                            <p>College State</p>
+                                            <p>Passing Year</p>
+                                            <div class="status-action-btn">
+                                                <p>Status</p>
+                                                <p>Action</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-user-list-item">
+                                            <p>1</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="select-user">Selected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>2</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="pending-btn">Pending</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+                                        <div class="table-user-list-item">
+                                            <p>3</p>
+                                            <p>davdvsd*********</p>
+                                            <p>Mukesh Dwivedi</p>
+                                            <p>mukesh@google.com</p>
+                                            <p>5867264927</p>
+                                            <p>Male</p>
+                                            <p>Web-Developer</p>
+                                            <p>Rewa</p>
+                                            <p>Bhopal</p>
+                                            <p>2025</p>
+                                            <div class="status-action-btn">
+                                                <button id="rejected-btn">Rejected</button>
+                                                <button id="view-user"><i class="fa-regular fa-eye"></i>View</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- add user list -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -2392,6 +3770,7 @@
                     </div>
 
 
+
                     <!-- add other section -->
 
 
@@ -2404,7 +3783,7 @@
 
     </article>
 
-    <script src="{% static "\js\dashboard.js" %}"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

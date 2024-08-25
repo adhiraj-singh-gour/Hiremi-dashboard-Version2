@@ -5,7 +5,8 @@ const sideNavOption = document.querySelectorAll(".side-navbar-container li a spa
 const sideNavh1 = document.querySelectorAll(".side-navbar-container h1")
 const sideNavIcon = document.querySelectorAll(".side-navbar-container li a i")
 
-
+const dashboardBody = document.querySelector("#dash-board-body-wrap main")
+console.log(dashboardBody);
 // console.log(doctToRight);
 // console.log(sideNav);
 // console.log(sideNavOption);
@@ -25,6 +26,7 @@ function liDisplayBlock() {
     sideNavOption.forEach((span) => {
         span.style.display = "block"
     });
+
     sideNavh1.forEach((h1) => {
         h1.style.display = "block"
     })
@@ -33,13 +35,18 @@ function liDisplayBlock() {
 doctToRight.addEventListener("click", () => {
     if (sideNav.style.width === "60px") {
         sideNav.style.width = "100%"
+        dashboardBody.style.left = "20%"
+        dashboardBody.style.width = "80%"
         liDisplayBlock()
         sideNavIcon.forEach((icon) => {
             icon.classList.remove("active")
         })
     }
+
     else {
         sideNav.style.width = "60px"
+        dashboardBody.style.left = "61px"// 1px extra to show the navside border
+        dashboardBody.style.width = "95%"
         liDisplayNone()
         sideNavIcon.forEach((icon) => {
             icon.classList.add("active")
